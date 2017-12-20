@@ -1,5 +1,8 @@
 package D2;
 
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
 /*
  * W pliku Main4.java umieść metodę o sygnaturze static String[] onlyTwoElements(String str, char separator).
 
@@ -11,9 +14,22 @@ public class StringsDivide04 {
 
 	public static void main(String[] args) {
 		String str = "Java-zadania-podzial-napisow";
+		System.out.println("Podział: " + Arrays.toString(onlyTwoElements1(str, '-')));
 	}
 	
 	static String[] onlyTwoElements1(String str, char separator) {
-		
+		String[] elements = {"", ""};
+		StringTokenizer tokens = new StringTokenizer(str, String.valueOf(separator));
+		int i = 0;
+		while(tokens.hasMoreTokens()) {
+			if(i < 1) {
+				elements[0] = tokens.nextToken();
+			}
+			if(i >= 1) {
+				elements[1] += tokens.nextToken("");
+			}
+			i++;
+		}
+		return elements;
 	}
 }
