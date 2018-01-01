@@ -2,7 +2,6 @@ package D4;
 
 import java.util.Scanner;
 
-import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 
 /*
  * W pliku Main7.java stwórz metodę o sygnaturze static void nettoBrutto(), która:
